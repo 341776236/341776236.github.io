@@ -12,22 +12,20 @@
 </head>
 
 <body>
-    <div id="animated-thumbnails-gallery" class="gallery-container">
-        <a class="gallery-item" href="res/d01/IPZ-339[01]-0001.png">
-            <img class="img-responsive" src="res/d01/IPZ-339[01]-0001.png" />
-        </a>
-        <a class="gallery-item" href="res/d01/IPZ-339[01]-0002.png">
-            <img class="img-responsive" src="res/d01/IPZ-339[01]-0002.png" />
-        </a>
-        <a class="gallery-item" href="res/d01/IPZ-339[01]-0003.png">
-            <img class="img-responsive" src="res/d01/IPZ-339[01]-0003.png" />
-        </a>
-    </div>
+    <!-- <div id="animated-thumbnails-gallery" class="gallery-container"> </div> -->
+
+    <div id="inline-gallery-container" class="inline-gallery-container"></div>
 
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/lightgallery/js/lightgallery.min.js"></script>
     <script src="lib/lightgallery/js/lg-zoom.min.js"></script>
-    <script type="text/javascript">
+    <script src="lib/lightgallery/js/lg-thumbnail.min.js"></script>
+    <script src="lib/lightgallery/js/lg-pager.min.js"></script>
+    <script src="lib/lightgallery/js/lg-autoplay.min.js"></script>
+    <script src="lib/lightgallery/js/lg-fullscreen.min.js"></script>
+    <script src="lib/lightgallery/js/lg-hash.min.js"></script>
+    <script src="lib/lightgallery/js/lg-share.min.js"></script>
+    <!-- <script type="text/javascript">
 
         // https://341776236.github.io/
         $.getJSON("/data/star/d01.json", function (data) {
@@ -52,6 +50,42 @@
             lightGallery(document.getElementById('animated-thumbnails-gallery'), {
                 thumbnail: true,
             });
+        });
+
+    </script> -->
+
+    <script type="text/javascript">
+
+        $.getJSON("https://341776236.github.io/data/star/d01.json", function (data) {
+
+            let arr = [];
+            data.forEach(v => { // 作品
+                v.part.forEach(p => { // 作品章节
+                    p.image.map(img => {
+                        return {
+                            src: `res/d01/${img}`,
+                            thumb: `res/d01/${img}`,
+                            subHtml: `<div class="lightGallery-captions"> <h4>${v.name}</h4> <p>${v.code}[${p.length}]</p> </div>`
+                        };
+                    }).forEach(i => arr.push(i));
+                });
+
+            });
+
+            const lgContainer = document.getElementById('inline-gallery-container');
+            const inlineGallery = lightGallery(lgContainer, {
+                container: lgContainer,
+                dynamic: true,
+                hash: false,
+                closable: false,
+                showMaximizeIcon: true,
+                appendSubHtmlTo: '.lg-item',
+                slideDelay: 400,
+                dynamicEl: arr
+            });
+
+            inlineGallery.openGallery();
+
         });
 
     </script>
