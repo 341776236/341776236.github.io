@@ -8,9 +8,79 @@
     },
     {
         "name": "水卜さくら",
-        "code": "A-01",
+        "code": "A-02",
         "height": "152",
         "measurements": "79/52/78",
         "cup": "G"
-    }
+    },
+    {
+        "name": "岸田歩美",
+        "code": "A-03",
+        "height": "156",
+        "measurements": "83/56/82",
+        "cup": "C"
+    },
+    {
+        "name": "羽田あい",
+        "code": "A-04",
+        "height": "169",
+        "measurements": "87/55/85",
+        "cup": "D"
+    },
+    {
+        "name": "本庄鈴",
+        "code": "B-01",
+        "height": "165",
+        "measurements": "85/59/88",
+        "cup": "C"
+    },
+    {
+        "name": "愛沢有紗",
+        "code": "B-02",
+        "height": "164",
+        "measurements": "86/56/85",
+        "cup": "F"
+    },
+    {
+        "name": "楓ふうあ",
+        "code": "B-03",
+        "height": "170",
+        "measurements": "93/59/88",
+        "cup": "F"
+    },
+    {
+        "name": "石原莉奈",
+        "code": "B-05",
+        "height": "155",
+        "measurements": "85/56/84",
+        "cup": "D"
+    },
+    {
+        "name": "青空ひかり",
+        "code": "B-14",
+        "height": "153",
+        "measurements": "85/58/83",
+        "cup": "D"
+    },
+    {
+        "name": "天使もえ",
+        "code": "B-06",
+        "height": "155",
+        "measurements": "84/57/82",
+        "cup": "D"
+    },
+    {
+        "name": "柚木ティナ",
+        "code": "B-12",
+        "height": "154",
+        "measurements": "84/58/83",
+        "cup": "C"
+    },
+    {
+        "name": "栗宮ふたば",
+        "code": "B-13",
+        "height": "153",
+        "measurements": "86/55/86",
+        "cup": "D"
+    },
 ]
