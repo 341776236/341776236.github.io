@@ -24,11 +24,34 @@
         </a>
     </div>
 
+    <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/lightgallery/js/lightgallery.min.js"></script>
     <script src="lib/lightgallery/js/lg-zoom.min.js"></script>
     <script type="text/javascript">
-        lightGallery(document.getElementById('animated-thumbnails-gallery'), {
-            thumbnail: true,
+
+        // https://341776236.github.io/
+        $.getJSON("/data/star/d01.json", function (data) {
+
+            let gallery_id = document.getElementById('animated-thumbnails-gallery');
+
+            data.forEach(v => { // 作品
+                let arr = [];
+
+                v.part.forEach(p => { // 作品章节
+
+                    p.image.map(img =>  // 章节图片
+                        `<a class="gallery-item" href="res/d01/${img}"> <img class="img-responsive" src="res/d01/${img}" /> </a>`
+                    ).forEach(i => arr.push(i));
+
+                });
+
+                document.getElementById('animated-thumbnails-gallery').innerHTML = arr.reduce((i, j) => i + j);
+            });
+
+
+            lightGallery(document.getElementById('animated-thumbnails-gallery'), {
+                thumbnail: true,
+            });
         });
 
     </script>
