@@ -4,8 +4,6 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width initial-scale=1'>
-    <link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext'
-        rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="/css/style.css">
     <title>花名册</title>
 </head>
@@ -15,13 +13,8 @@
         <div id='write' class=''>
             <h1 id='命名规则'><span>命名规则</span></h1>
             <ul>
-                <li><span>影片: 女优.厂商.code.字幕.码.part </span><br />
-                    <span>例子: A-01.01.404.01.01.01, A-01.01.404.01.01._</span>
-                </li>
-                <li>
-                    <span>花絮: 女优.厂商.code._</span><br />
-                    <span>例子: B-11.14.176._</span>
-                </li>
+                <li><span>影片: 女优.厂商.code.字幕.码.part </span></li>
+                <li><span>花絮: 女优.厂商.code._</span></li>
             </ul>
             
             <h2 id='厂商映射'><span>厂商映射</span></h2>
@@ -80,7 +73,6 @@
                         </tr>
             `).reduce((previous, current) => previous + current);
         }
-        // <a href=${base_url}/demo.html?star=${item.code.toLocaleLowerCase().replace('-','')}><span>${item.name}</span></a>
 
         // 厂商映射
         function renderManufacturer(data){

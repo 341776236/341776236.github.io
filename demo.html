@@ -27,7 +27,8 @@
     <script type="text/javascript">
 
         const base_url = "https://341776236.github.io";
-        const image_base_url = "https://gitlab.com/kwy43xlrte4sodf/dir/-/raw"
+        const image_base_url = "https://341776236.github.io"
+        // const image_base_url = "https://gitlab.com/kwy43xlrte4sodf/dir/-/raw/main"
 
         function getQueryString(name) {
             let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
@@ -48,8 +49,8 @@
                 v.part.forEach(p => { // 作品章节
                     p.image.map(img => {
                         return {
-                            src: `${image_base_url}/main/res/${param_star}/${img}.png`,
-                            thumb: `${image_base_url}/main/res/thumb/${param_star}/${img}.jpeg`,
+                            src: `${image_base_url}/res/${param_star}/${img}.png`,
+                            thumb: `${image_base_url}/res/thumb/${param_star}/${img}.jpeg`,
                             subHtml: `<div class="lightGallery-captions"> <h4>${v.name}</h4> <p>${v.code}[${p.length}]</p> </div>`
                         };
                     }).forEach(i => arr.push(i));
