@@ -15,39 +15,22 @@
         <div id='write' class=''>
             <h1 id='命名规则'><span>命名规则</span></h1>
             <ul>
-                <li><span>影片: 女优.厂商.code.字幕.码.part </span><br /><span>例子: A-01.01.404.01.01.01,
-                        A-01.01.404.01.01._</span></li>
-                <li><span>花絮: 女优.厂商.code._</span>
+                <li><span>影片: 女优.厂商.code.字幕.码.part </span><br />
+                    <span>例子: A-01.01.404.01.01.01, A-01.01.404.01.01._</span>
+                </li>
+                <li>
+                    <span>花絮: 女优.厂商.code._</span><br />
                     <span>例子: B-11.14.176._</span>
                 </li>
             </ul>
-            <h1 id='映射关系'><span>映射关系</span></h1>
-            <figure>
-                <table>
-                    <thead>
-                        <tr>
-                            <th><span>字幕</span></th>
-                            <th style='text-align:right;'><span>无码</span></th>
-                            <th style='text-align:center;'><span>part(位置/全/末尾)</span></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span>1/0</span></td>
-                            <td style='text-align:right;'><span>0/1</span></td>
-                            <td style='text-align:center;'><span>1,2.../00/_</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </figure>
-            <p>&nbsp;</p>
+            
             <h2 id='厂商映射'><span>厂商映射</span></h2>
             <figure>
                 <table>
                     <thead>
                         <tr>
-                            <th><span>厂商</span></th>
-                            <th style='text-align:right;'><span>code</span></th>
+                            <th style='text-align:center;'><span>厂商</span></th>
+                            <th style='text-align:center;'><span>code</span></th>
                             <th style='text-align:center;'><span>厂商</span></th>
                             <th style='text-align:center;'><span>code</span></th>
                             <th style='text-align:center;'><span>厂商</span></th>
@@ -62,8 +45,8 @@
                 <table>
                     <thead>
                         <tr>
-                            <th style='text-align:right;'><span>姓名</span></th>
-                            <th style='text-align:right;'><span>code</span></th>
+                            <th style='text-align:center;'><span>姓名</span></th>
+                            <th style='text-align:center;'><span>code</span></th>
                             <th style='text-align:center;'><span>身高</span></th>
                             <th style='text-align:center;'><span>三围(胸腰臀)</span></th>
                             <th style='text-align:center;'><span>罩杯</span></th>
@@ -81,29 +64,34 @@
         const base_url = "https://341776236.github.io";
 
         // 人物映射
-        $.getJSON(`${base_url}/data/actress.json`, function (data) {
+        function renderActress(data){
             let actress_tbody = document.getElementById('actress_tbody');
             actress_tbody.innerHTML = data.map(item => `
                         <tr>
-                            <td><span>${item.name}</span></td>
+                            <td style='text-align:center;'><span>${item.name}</span></td>
                             <td style='text-align:center;'><span>${item.code}</span></td>
                             <td style='text-align:center;'><span>${item.height}cm</span></td>
                             <td style='text-align:center;'><span>${item.measurements}</span></td>
                             <td style='text-align:center;'><span>${item.cup}</span></td>
                         </tr>
             `).reduce((previous, current) => previous + current);
-        });
-
+        }
 
         // 厂商映射
-        $.getJSON(`${base_url}/data/manufacturer.json`, function (data) {
+        function renderManufacturer(data){
             let manufacturer_tbody = document.getElementById('manufacturer_tbody');
             manufacturer_tbody.innerHTML = data.map(item => `
                         <td style='text-align:center;'><span>${item.name}</span></td>
                         <td style='text-align:center;'><span>${item.code}</span></td>
             `).map((item, index) => index % 3 == 0 ? "<tr>" + item : index % 3 == 2 ? item + "</tr>" : item)
-                .reduce((previous, current) => previous + current);
-        });
+                .reduce((previous, current) => previous + current);            
+        }
+
+        
+        // 网络请求
+        $.getJSON(`${base_url}/data/actress.json`, data => renderActress(data));
+        $.getJSON(`${base_url}/data/manufacturer.json`, data => renderManufacturer(data));
+
     </script>
 
 </body>
