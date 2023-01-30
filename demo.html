@@ -39,18 +39,17 @@
             return "d01";
         }
 
-        let star = "d03";
-        //let star = getQueryString("star");
-
-        $.getJSON(`${base_url}/data/star/${star}.json`, function (data) {
+        
+        let param_star = getQueryString("star");
+        $.getJSON(`${base_url}/data/star/${param_star}.json`, function (data) {
 
             let arr = [];
             data.forEach(v => { // 作品
                 v.part.forEach(p => { // 作品章节
                     p.image.map(img => {
                         return {
-                            src: `${image_base_url}/main/res/${star}/${img}.png`,
-                            thumb: `${image_base_url}/main/res/thumb/${star}/${img}.jpeg`,
+                            src: `${image_base_url}/main/res/${param_star}/${img}.png`,
+                            thumb: `${image_base_url}/main/res/thumb/${param_star}/${img}.jpeg`,
                             subHtml: `<div class="lightGallery-captions"> <h4>${v.name}</h4> <p>${v.code}[${p.length}]</p> </div>`
                         };
                     }).forEach(i => arr.push(i));

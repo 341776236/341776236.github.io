@@ -68,7 +68,11 @@
             let actress_tbody = document.getElementById('actress_tbody');
             actress_tbody.innerHTML = data.map(item => `
                         <tr>
-                            <td style='text-align:center;'><span>${item.name}</span></td>
+                            <td style='text-align:center;'>
+                                <a target="_blank" href='${base_url}/demo.html?star=${item.code.toLocaleLowerCase().replace('-','')}'>
+                                    <span>${item.name}</span>
+                                </a>
+                            </td>
                             <td style='text-align:center;'><span>${item.code}</span></td>
                             <td style='text-align:center;'><span>${item.height}cm</span></td>
                             <td style='text-align:center;'><span>${item.measurements}</span></td>
@@ -76,6 +80,7 @@
                         </tr>
             `).reduce((previous, current) => previous + current);
         }
+        // <a href=${base_url}/demo.html?star=${item.code.toLocaleLowerCase().replace('-','')}><span>${item.name}</span></a>
 
         // 厂商映射
         function renderManufacturer(data){
