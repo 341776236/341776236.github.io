@@ -41,6 +41,8 @@
 
         let star = "b01";
         //let star = getQueryString(star);
+        console.log(getQueryString("star"));
+
         $.getJSON(`${base_url}/data/star/${star}.json`, function (data) {
 
             let arr = [];
