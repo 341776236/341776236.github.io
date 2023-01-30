@@ -37,7 +37,9 @@
         "height": "165",
         "measurements": "85/59/88",
         "cup": "C",
-        "figure": []
+        "figure": [
+            "STARS-141[02]-0006.png"
+        ]
     },
     {
         "name": "愛沢有紗",
@@ -118,5 +120,13 @@
         "measurements": "84/54/88",
         "cup": "C",
         "figure": []
+    },
+    {
+        "name": "園田みおん",
+        "code": "D-03",
+        "height": "150",
+        "measurements": "90/58/88",
+        "cup": "G",
+        "figure": ["乾りっか"]
     }
 ]

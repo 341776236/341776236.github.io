@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>显示</title>
     <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lg-fb-comment-box.css" />
     <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lg-transitions.css" />
     <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lightgallery.css" />
@@ -28,8 +28,7 @@
     <script type="text/javascript">
 
         let star = "b01";
-        // file:///Users/mondo/Developer/Project/341776236.github.io
-        $.getJSON(`/data/star/${star}.json`, function (data) {
+        $.getJSON(`https://341776236.github.io/data/star/${star}.json`, function (data) {
 
             let arr = [];
             data.forEach(v => { // 作品
@@ -38,7 +37,7 @@
                         return {
                             src: `res/${star}/${img}`,
                             thumb: `res/${star}/${img}`,
-                            subHtml: `<div class="lightGallery-captions"> <h4>${v.name}</h4> <p>${v.code}[${p.length}]</p> </div>`
+                            subHtml: `<div class="lightGallery-captions"> <h4>${v.name}</h4> <p>${v.code}[${p.name}][${p.length}]</p> </div>`
                         };
                     }).forEach(i => arr.push(i));
                 });

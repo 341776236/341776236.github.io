@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>显示</title>
     <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lg-fb-comment-box.css" />
     <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lg-transitions.css" />
     <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lightgallery.css" />
 </head>
 
 <body>
-    <!-- <div id="animated-thumbnails-gallery" class="gallery-container"> </div> -->
-
     <div id="inline-gallery-container" class="inline-gallery-container"></div>
 
     <script src="lib/jquery/jquery.min.js"></script>
@@ -25,36 +23,11 @@
     <script src="lib/lightgallery/js/lg-fullscreen.min.js"></script>
     <script src="lib/lightgallery/js/lg-hash.min.js"></script>
     <script src="lib/lightgallery/js/lg-share.min.js"></script>
-    <!-- <script type="text/javascript">
-
-        // https://341776236.github.io/
-        $.getJSON("/data/star/d01.json", function (data) {
-
-            let gallery_id = document.getElementById('animated-thumbnails-gallery');
-
-            data.forEach(v => { // 作品
-                let arr = [];
-
-                v.part.forEach(p => { // 作品章节
-
-                    p.image.map(img =>  // 章节图片
-                        `<a class="gallery-item" href="res/d01/${img}"> <img class="img-responsive" src="res/d01/${img}" /> </a>`
-                    ).forEach(i => arr.push(i));
-
-                });
-
-                document.getElementById('animated-thumbnails-gallery').innerHTML = arr.reduce((i, j) => i + j);
-            });
-
-
-            lightGallery(document.getElementById('animated-thumbnails-gallery'), {
-                thumbnail: true,
-            });
-        });
-
-    </script> -->
 
     <script type="text/javascript">
+
+        const base_url = "https://341776236.github.io";
+        const image_base_url = "https://gitlab.com/kwy43xlrte4sodf/dir/-/raw"
 
         function getQueryString(name) {
             let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
@@ -66,21 +39,21 @@
             return "d01";
         }
 
-        let star = getQueryString(star);
-        $.getJSON(`https://341776236.github.io/data/star/${star}.json`, function (data) {
+        let star = "b01";
+        //let star = getQueryString(star);
+        $.getJSON(`${base_url}/data/star/${star}.json`, function (data) {
 
             let arr = [];
             data.forEach(v => { // 作品
                 v.part.forEach(p => { // 作品章节
                     p.image.map(img => {
                         return {
-                            src: `res/${star}/${img}`,
-                            thumb: `res/${star}/${img}`,
+                            src: `${image_base_url}/main/res/${star}/${img}.png`,
+                            thumb: `${image_base_url}/main/res/thumb/${star}/${img}.jpeg`,
                             subHtml: `<div class="lightGallery-captions"> <h4>${v.name}</h4> <p>${v.code}[${p.length}]</p> </div>`
                         };
                     }).forEach(i => arr.push(i));
                 });
-
             });
 
             const lgContainer = document.getElementById('inline-gallery-container');
