@@ -12,7 +12,8 @@
 </head>
 
 <body>
-    <div id="inline-gallery-container" class="inline-gallery-container"></div>
+
+    <div class="gallery-container" id="animated-thumbnails-gallery"></div>
 
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/lightgallery/js/lightgallery.min.js"></script>
@@ -25,11 +26,6 @@
     <script src="lib/lightgallery/js/lg-share.min.js"></script>
 
     <script type="text/javascript">
-
-        const base_url = "https://341776236.github.io";
-        const image_base_url = "https://341776236.github.io"
-        // const image_base_url = "https://gitlab.com/kwy43xlrte4sodf/dir/-/raw/main"
-
         function getQueryString(name) {
             let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
             let r = window.location.search.substr(1).match(reg);
@@ -40,36 +36,36 @@
             return "d01";
         }
 
-        
+        // configs
         let param_star = getQueryString("star");
+        const base_url = "https://341776236.github.io";
+        const image_base_url = "https://341776236.github.io";
+
+        // request
         $.getJSON(`${base_url}/data/star/${param_star}.json`, function (data) {
+
+            console.log(data);
 
             let arr = [];
             data.forEach(v => { // 作品
                 v.part.forEach(p => { // 作品章节
                     p.image.map(img => {
-                        return {
-                            src: `${image_base_url}/res/${param_star}/${img}.png`,
-                            thumb: `${image_base_url}/res/thumb/${param_star}/${img}.jpeg`,
-                            subHtml: `<div class="lightGallery-captions"> <h4>${v.name}</h4> <p>${v.code}[${p.length}]</p> </div>`
-                        };
+                        return `
+                        <a class="gallery-item" data-src="${image_base_url}/res/${param_star}/${img}.png"
+                            data-sub-html="<h4>${v.name} - <span>${v.code}.[${p.name}]</span></h4><p>${p.length} / ${p.des}</p>">
+                            <img class="img-responsive" src="${image_base_url}/res/thumb/${param_star}/${img}.jpeg" />
+                        </a>
+                        `;
                     }).forEach(i => arr.push(i));
                 });
+
             });
 
-            const lgContainer = document.getElementById('inline-gallery-container');
-            const inlineGallery = lightGallery(lgContainer, {
-                container: lgContainer,
-                dynamic: true,
-                hash: false,
-                closable: false,
-                showMaximizeIcon: true,
-                appendSubHtmlTo: '.lg-item',
-                slideDelay: 400,
-                dynamicEl: arr
-            });
+            document.getElementById("animated-thumbnails-gallery").innerHTML = arr.reduce((p, c) => p + c);
 
-            inlineGallery.openGallery();
+            lightGallery(document.getElementById('animated-thumbnails-gallery'), {
+                thumbnail: true,
+            });
 
         });
 
