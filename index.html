@@ -137,10 +137,9 @@
 
         const base_url = "https://341776236.github.io";
 
+        // 人物映射
         $.getJSON(`${base_url}/data/actress.json`, function (data) {
-
             let actress_tbody = document.getElementById('actress_tbody');
-
             actress_tbody.innerHTML = data.map(item => `
                         <tr>
                             <td><span>${item.name}</span></td>
@@ -150,9 +149,17 @@
                             <td style='text-align:center;'><span>${item.cup}</span></td>
                         </tr>
             `).reduce((previous, current) => previous + current);
-
         });
 
+
+        // 厂商映射
+        $.getJSON(`${base_url}/data/manufacturer.json`, function (data) {
+            // let manufacturer_tbody = document.getElementById('manufacturer_tbody');
+            // manufacturer_tbody.innerHTML = data.map(item => `
+            //             <td style='text-align:center;'><span>${item.name}</span></td>
+            //             <td style='text-align:center;'><span>${item.code}</span></td>
+            // `).reduce((p, c, index) => index % 3 == 0 ? `<tr>${p + c}` : `${p + c}`);
+        });
     </script>
 
 </body>

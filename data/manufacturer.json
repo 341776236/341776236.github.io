@@ -52,35 +52,35 @@
         "code":"13"
     },
     {
-        "name":"CEMD",
+        "name":"CEMD *",
         "code":"14"
     },
     {
-        "name":"ATID",
+        "name":"ATID *",
         "code":"15"
     },
     {
-        "name":"RBD",
-        "code":"16"
+        "name":"RBD *",
+        "code":"14"
     },
     {
-        "name":"TCHR",
-        "code":"17"
+        "name":"TCHR *",
+        "code":"15"
     },
     {
         "name":"VEC",
-        "code":"18"
+        "code":"16"
     },
     {
         "name":"MEYD",
-        "code":"19"
+        "code":"17"
     },
     {
         "name":"CHN",
-        "code":"20"
+        "code":"18"
     },
     {
         "name":"SSIS",
-        "code":"21"
+        "code":"19"
     }
 ]
