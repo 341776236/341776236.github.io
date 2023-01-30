@@ -54,72 +54,15 @@
                             <th style='text-align:center;'><span>code</span></th>
                         </tr>
                     </thead>
-                    <tbody id="manufacturer_tbody">
-                        <tr>
-                            <td><span>ABP</span></td>
-                            <td style='text-align:right;'><span>01</span></td>
-                            <td style='text-align:center;'><span>IPX</span></td>
-                            <td style='text-align:center;'><span>02</span></td>
-                            <td style='text-align:center;'><span>STARS</span></td>
-                            <td style='text-align:center;'><span>03</span></td>
-                        </tr>
-                        <tr>
-                            <td><span>EBOD</span></td>
-                            <td style='text-align:right;'><span>04</span></td>
-                            <td style='text-align:center;'><span>CAWD</span></td>
-                            <td style='text-align:center;'><span>05</span></td>
-                            <td style='text-align:center;'><span>SSNI</span></td>
-                            <td style='text-align:center;'><span>06</span></td>
-                        </tr>
-                        <tr>
-                            <td><span>FSDSS</span></td>
-                            <td style='text-align:right;'><span>07</span></td>
-                            <td style='text-align:center;'><span>MIDE</span></td>
-                            <td style='text-align:center;'><span>08</span></td>
-                            <td style='text-align:center;'><span>SHKD</span></td>
-                            <td style='text-align:center;'><span>09</span></td>
-                        </tr>
-                        <tr>
-                            <td><span>IPZ</span></td>
-                            <td style='text-align:right;'><span>10</span></td>
-                            <td style='text-align:center;'><span>STAR</span></td>
-                            <td style='text-align:center;'><span>11</span></td>
-                            <td style='text-align:center;'><span>AVZG</span></td>
-                            <td style='text-align:center;'><span>12</span></td>
-                        </tr>
-                        <tr>
-                            <td><span>AQMB</span></td>
-                            <td style='text-align:right;'><span>13</span></td>
-                            <td style='text-align:center;'><span>CEMD</span></td>
-                            <td style='text-align:center;'><span>14</span></td>
-                            <td style='text-align:center;'><span>ATID</span></td>
-                            <td style='text-align:center;'><span>15</span></td>
-                        </tr>
-                        <tr>
-                            <td><span>RBD</span></td>
-                            <td style='text-align:right;'><span>14</span></td>
-                            <td style='text-align:center;'><span>TCHR</span></td>
-                            <td style='text-align:center;'><span>15</span></td>
-                            <td style='text-align:center;'><span>VEC</span></td>
-                            <td style='text-align:center;'><span>16</span></td>
-                        </tr>
-                        <tr>
-                            <td><span>MEYD</span></td>
-                            <td style='text-align:right;'><span>17</span></td>
-                            <td style='text-align:center;'><span>CHN</span></td>
-                            <td style='text-align:center;'><span>18</span></td>
-                            <td style='text-align:center;'><span>SSIS</span></td>
-                            <td style='text-align:center;'><span>19</span></td>
-                        </tr>
-                    </tbody>
+                    <tbody id="manufacturer_tbody"></tbody>
                 </table>
             </figure>
-            <h2 id='人物映射关系'><span>人物映射关系</span></h2>
+            <h2 id='人物映射关系'><span>人物映射</span></h2>
             <figure>
                 <table>
                     <thead>
                         <tr>
-                            <th><span>姓名</span></th>
+                            <th style='text-align:right;'><span>姓名</span></th>
                             <th style='text-align:right;'><span>code</span></th>
                             <th style='text-align:center;'><span>身高</span></th>
                             <th style='text-align:center;'><span>三围(胸腰臀)</span></th>
@@ -154,11 +97,12 @@
 
         // 厂商映射
         $.getJSON(`${base_url}/data/manufacturer.json`, function (data) {
-            // let manufacturer_tbody = document.getElementById('manufacturer_tbody');
-            // manufacturer_tbody.innerHTML = data.map(item => `
-            //             <td style='text-align:center;'><span>${item.name}</span></td>
-            //             <td style='text-align:center;'><span>${item.code}</span></td>
-            // `).reduce((p, c, index) => index % 3 == 0 ? `<tr>${p + c}` : `${p + c}`);
+            let manufacturer_tbody = document.getElementById('manufacturer_tbody');
+            manufacturer_tbody.innerHTML = data.map(item => `
+                        <td style='text-align:center;'><span>${item.name}</span></td>
+                        <td style='text-align:center;'><span>${item.code}</span></td>
+            `).map((item, index) => index % 3 == 0 ? "<tr>" + item : index % 3 == 2 ? item + "</tr>" : item)
+                .reduce((previous, current) => previous + current);
         });
     </script>
 
