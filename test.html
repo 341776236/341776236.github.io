@@ -12,7 +12,6 @@
 </head>
 
 <body>
-    <!-- <div id="animated-thumbnails-gallery" class="gallery-container"> </div> -->
 
     <div id="inline-gallery-container" class="inline-gallery-container"></div>
 
@@ -25,49 +24,12 @@
     <script src="lib/lightgallery/js/lg-fullscreen.min.js"></script>
     <script src="lib/lightgallery/js/lg-hash.min.js"></script>
     <script src="lib/lightgallery/js/lg-share.min.js"></script>
-    <!-- <script type="text/javascript">
-
-        // https://341776236.github.io/
-        $.getJSON("/data/star/d01.json", function (data) {
-
-            let gallery_id = document.getElementById('animated-thumbnails-gallery');
-
-            data.forEach(v => { // 作品
-                let arr = [];
-
-                v.part.forEach(p => { // 作品章节
-
-                    p.image.map(img =>  // 章节图片
-                        `<a class="gallery-item" href="res/d01/${img}"> <img class="img-responsive" src="res/d01/${img}" /> </a>`
-                    ).forEach(i => arr.push(i));
-
-                });
-
-                document.getElementById('animated-thumbnails-gallery').innerHTML = arr.reduce((i, j) => i + j);
-            });
-
-
-            lightGallery(document.getElementById('animated-thumbnails-gallery'), {
-                thumbnail: true,
-            });
-        });
-
-    </script> -->
 
     <script type="text/javascript">
 
-        function getQueryString(name) {
-            let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-            let r = window.location.search.substr(1).match(reg);
-            if (r != null) {
-                return decodeURIComponent(r[2]);
-            };
-
-            return "d01";
-        }
-
-        let star = getQueryString(star);
-        $.getJSON(`https://341776236.github.io/data/star/${star}.json`, function (data) {
+        let star = "b01";
+        // file:///Users/mondo/Developer/Project/341776236.github.io
+        $.getJSON(`/data/star/${star}.json`, function (data) {
 
             let arr = [];
             data.forEach(v => { // 作品

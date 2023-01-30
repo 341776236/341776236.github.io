@@ -110,5 +110,13 @@
         "measurements": "83/58/84",
         "cup": "D",
         "figure": []
+    },
+    {
+        "name": "流川夕",
+        "code": "D-02",
+        "height": "160",
+        "measurements": "84/54/88",
+        "cup": "C",
+        "figure": []
     }
 ]
