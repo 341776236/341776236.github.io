@@ -128,5 +128,13 @@
         "measurements": "90/58/88",
         "cup": "G",
         "figure": ["乾りっか"]
+    },
+    {
+        "name": "吉沢明歩",
+        "code": "D-04",
+        "height": "161",
+        "measurements": "86/58/86",
+        "cup": "E",
+        "figure": []
     }
 ]
