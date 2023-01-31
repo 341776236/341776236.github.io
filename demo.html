@@ -9,18 +9,27 @@
     <!-- <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lg-fb-comment-box.css" /> -->
     <!-- <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lg-transitions.css" /> -->
     <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lightgallery.css" />
-    <link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+    <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lg-zoom.css" />
+    <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lg-thumbnail.css" />
 </head>
 
 <body>
 
-    <div class="gallery-container" id="animated-thumbnails-gallery"></div>
+    <div class="container-sm">
+        <div class="row justify-content-center">
+            <div class="col col-md-10">
+                <div class="gallery-container" id="animated-thumbnails-gallery"></div>
+            </div>
+        </div>
+    </div>
 
-    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-3.6.3.min.js"></script>
+    <!-- <script src="lib/jquery/jquery.justifiedGallery.js"></script> -->
     <script src="lib/lightgallery/js/lightgallery.min.js"></script>
     <script src="lib/lightgallery/js/lg-zoom.min.js"></script>
     <script src="lib/lightgallery/js/lg-thumbnail.min.js"></script>
-    <script src="lib/lightgallery/js/lg-pager.min.js"></script>
+    <!-- <script src="lib/lightgallery/js/lg-pager.min.js"></script> -->
+    <!-- <script src="lib/lightgallery/js/lg-rotate.min.js"></script> -->
     <!-- <script src="lib/lightgallery/js/lg-autoplay.min.js"></script> -->
     <script src="lib/lightgallery/js/lg-fullscreen.min.js"></script>
     <!-- <script src="lib/lightgallery/js/lg-hash.min.js"></script> -->
@@ -34,13 +43,15 @@
                 return decodeURIComponent(r[2]);
             };
 
-            return "d01";
+            return "b01";
         }
 
         // configs
         let param_star = getQueryString("star");
         const base_url = "https://341776236.github.io";
         const image_base_url = "https://341776236.github.io";
+        //const image_base_url = "https://gitlab.com/kwy43xlrte4sodf/dir/-/raw/main"
+        //const image_base_url = "/Users/mondo/Developer/Project/341776236.github.io"
 
         // request
         $.getJSON(`${base_url}/data/star/${param_star}.json`, function (data) {
@@ -50,7 +61,7 @@
                 v.part.forEach(p => { // 作品章节
                     p.image.map(img => {
                         return `
-                        <a class="gallery-item" 
+                        <a class="gallery-item"
                            data-src="${image_base_url}/src/${param_star}/${img}.png"
                            data-sub-html="<h4>${v.name} - <span>${v.code}.[${p.name}]</span></h4><p>${p.length} / ${p.des}</p>">
                             <img class="img-responsive" src="${image_base_url}/src/thumb/${param_star}/${img}.jpeg" />
@@ -62,9 +73,18 @@
 
             document.getElementById("animated-thumbnails-gallery").innerHTML = arr.reduce((p, c) => p + c);
 
-            lightGallery(document.getElementById('animated-thumbnails-gallery'), {
-                thumbnail: true,
-                pager: false,
+            lightGallery(document.getElementById("animated-thumbnails-gallery"), {
+                // autoplayFirstVideo: false,
+                // pager: false,
+                galleryId: "nature",
+                download: false,
+                plugins: [lgZoom, lgThumbnail],
+                // mobileSettings: {
+                //     controls: false,
+                //     showCloseIcon: false,
+                //     download: false,
+                //     rotate: false
+                // }
             });
 
         });
