@@ -74,17 +74,11 @@
             document.getElementById("animated-thumbnails-gallery").innerHTML = arr.reduce((p, c) => p + c);
 
             lightGallery(document.getElementById("animated-thumbnails-gallery"), {
-                // autoplayFirstVideo: false,
-                // pager: false,
                 galleryId: "nature",
                 download: false,
-                plugins: [lgZoom, lgThumbnail],
-                // mobileSettings: {
-                //     controls: false,
-                //     showCloseIcon: false,
-                //     download: false,
-                //     rotate: false
-                // }
+                toggleThumb: true,
+                allowMediaOverlap: true,
+                plugins: [lgZoom, lgThumbnail]
             });
 
         });
