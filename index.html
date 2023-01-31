@@ -63,7 +63,7 @@
             actress_tbody.innerHTML = data.map(item => `
                         <tr>
                             <td style='text-align:center;'>
-                                <a target="_blank" href='${base_url}/demo.html?star=${item.code.toLocaleLowerCase().replace('-','')}'>
+                                <a href='${base_url}/demo.html?star=${item.code.toLocaleLowerCase().replace('-','')}'>
                                     <span>${item.name}</span>
                                 </a>
                             </td>
