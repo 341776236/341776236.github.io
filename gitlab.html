@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>显示</title>
-    <!-- <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lg-fb-comment-box.css" /> -->
-    <!-- <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lg-transitions.css" /> -->
     <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lightgallery.css" />
     <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lg-zoom.css" />
     <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lg-thumbnail.css" />
@@ -24,16 +22,10 @@
     </div>
 
     <script src="lib/jquery/jquery-3.6.3.min.js"></script>
-    <!-- <script src="lib/jquery/jquery.justifiedGallery.js"></script> -->
     <script src="lib/lightgallery/js/lightgallery.min.js"></script>
     <script src="lib/lightgallery/js/lg-zoom.min.js"></script>
     <script src="lib/lightgallery/js/lg-thumbnail.min.js"></script>
-    <!-- <script src="lib/lightgallery/js/lg-pager.min.js"></script> -->
-    <!-- <script src="lib/lightgallery/js/lg-rotate.min.js"></script> -->
-    <!-- <script src="lib/lightgallery/js/lg-autoplay.min.js"></script> -->
     <script src="lib/lightgallery/js/lg-fullscreen.min.js"></script>
-    <!-- <script src="lib/lightgallery/js/lg-hash.min.js"></script> -->
-    <!-- <script src="lib/lightgallery/js/lg-share.min.js"></script> -->
 
     <script type="text/javascript" crossorigin="use-credentials">
         function getQueryString(name) {
@@ -49,9 +41,8 @@
         // configs
         let param_star = getQueryString("star");
         const base_url = "https://341776236.github.io";
-        //const image_base_url = "https://341776236.github.io";
-        //const image_base_url = "https://gitlab.com/kwy43xlrte4sodf/dir/-/raw/main"
-        const image_base_url = "/Users/mondo/Developer/Project/341776236.github.io"
+        const image_base_url = "https://gitlab.com/kwy43xlrte4sodf/dir/-/raw/main"
+        //const image_base_url = "/Users/mondo/Developer/Project/341776236.github.io"
 
         // request
         $.getJSON(`${base_url}/data/star/${param_star}.json`, function (data) {
@@ -74,17 +65,11 @@
             document.getElementById("animated-thumbnails-gallery").innerHTML = arr.reduce((p, c) => p + c);
 
             lightGallery(document.getElementById("animated-thumbnails-gallery"), {
-                // autoplayFirstVideo: false,
-                // pager: false,
                 galleryId: "nature",
                 download: false,
-                plugins: [lgZoom, lgThumbnail],
-                // mobileSettings: {
-                //     controls: false,
-                //     showCloseIcon: false,
-                //     download: false,
-                //     rotate: false
-                // }
+                toggleThumb: true,
+                allowMediaOverlap: true,
+                plugins: [lgZoom, lgThumbnail]
             });
 
         });
