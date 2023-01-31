@@ -45,16 +45,14 @@
         // request
         $.getJSON(`${base_url}/data/star/${param_star}.json`, function (data) {
 
-            console.log(data);
-
             let arr = [];
             data.forEach(v => { // 作品
                 v.part.forEach(p => { // 作品章节
                     p.image.map(img => {
                         return `
-                        <a class="gallery-item" data-src="${image_base_url}/res/${param_star}/${img}.png"
+                        <a class="gallery-item" data-src="${image_base_url}/src/${param_star}/${img}.png"
                             data-sub-html="<h4>${v.name} - <span>${v.code}.[${p.name}]</span></h4><p>${p.length} / ${p.des}</p>">
-                            <img class="img-responsive" src="${image_base_url}/res/thumb/${param_star}/${img}.jpeg" />
+                            <img class="img-responsive" src="${image_base_url}/src/thumb/${param_star}/${img}.jpeg" />
                         </a>
                         `;
                     }).forEach(i => arr.push(i));
