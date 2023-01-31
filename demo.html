@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>显示</title>
-    <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lg-fb-comment-box.css" />
-    <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lg-transitions.css" />
+    <!-- <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lg-fb-comment-box.css" /> -->
+    <!-- <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lg-transitions.css" /> -->
     <link type="text/css" rel="stylesheet" href="lib/lightgallery/css/lightgallery.css" />
     <link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
 </head>
@@ -21,12 +21,12 @@
     <script src="lib/lightgallery/js/lg-zoom.min.js"></script>
     <script src="lib/lightgallery/js/lg-thumbnail.min.js"></script>
     <script src="lib/lightgallery/js/lg-pager.min.js"></script>
-    <script src="lib/lightgallery/js/lg-autoplay.min.js"></script>
+    <!-- <script src="lib/lightgallery/js/lg-autoplay.min.js"></script> -->
     <script src="lib/lightgallery/js/lg-fullscreen.min.js"></script>
-    <script src="lib/lightgallery/js/lg-hash.min.js"></script>
-    <script src="lib/lightgallery/js/lg-share.min.js"></script>
+    <!-- <script src="lib/lightgallery/js/lg-hash.min.js"></script> -->
+    <!-- <script src="lib/lightgallery/js/lg-share.min.js"></script> -->
 
-    <script type="text/javascript">
+    <script type="text/javascript" crossorigin="use-credentials">
         function getQueryString(name) {
             let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
             let r = window.location.search.substr(1).match(reg);
@@ -50,20 +50,21 @@
                 v.part.forEach(p => { // 作品章节
                     p.image.map(img => {
                         return `
-                        <a class="gallery-item" data-src="${image_base_url}/src/${param_star}/${img}.png"
-                            data-sub-html="<h4>${v.name} - <span>${v.code}.[${p.name}]</span></h4><p>${p.length} / ${p.des}</p>">
+                        <a class="gallery-item" 
+                           data-src="${image_base_url}/src/${param_star}/${img}.png"
+                           data-sub-html="<h4>${v.name} - <span>${v.code}.[${p.name}]</span></h4><p>${p.length} / ${p.des}</p>">
                             <img class="img-responsive" src="${image_base_url}/src/thumb/${param_star}/${img}.jpeg" />
                         </a>
                         `;
                     }).forEach(i => arr.push(i));
                 });
-
             });
 
             document.getElementById("animated-thumbnails-gallery").innerHTML = arr.reduce((p, c) => p + c);
 
             lightGallery(document.getElementById('animated-thumbnails-gallery'), {
                 thumbnail: true,
+                pager: false,
             });
 
         });
