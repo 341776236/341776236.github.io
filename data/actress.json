@@ -2,147 +2,163 @@
     {
         "name": "上原瑞穂",
         "code": "A-01",
-        "height": "160",
-        "measurements": "85/58/80",
-        "cup": "D",
-        "figure": []
+        "body": {
+            "height": "160",
+            "measurements": "85/58/80",
+            "cup": "D"
+        }
     },
     {
         "name": "水卜さくら",
         "code": "A-02",
-        "height": "152",
-        "measurements": "79/52/78",
-        "cup": "G",
-        "figure": []
+        "body": {
+            "height": "152",
+            "measurements": "79/52/78",
+            "cup": "G"
+        }
     },
     {
         "name": "岸田歩美",
         "code": "A-03",
-        "height": "156",
-        "measurements": "83/56/82",
-        "cup": "C",
-        "figure": []
+        "body": {
+            "height": "156",
+            "measurements": "83/56/82",
+            "cup": "C"
+        }
     },
     {
         "name": "羽田あい",
         "code": "A-04",
-        "height": "169",
-        "measurements": "87/55/85",
-        "cup": "D",
-        "figure": []
+        "body": {
+            "height": "169",
+            "measurements": "87/55/85",
+            "cup": "D"
+        }
     },
     {
         "name": "本庄鈴",
         "code": "B-01",
-        "height": "165",
-        "measurements": "85/59/88",
-        "cup": "C",
-        "figure": [
-            "STARS-141[02]-0006"
-        ]
+        "body": {
+            "height": "165",
+            "measurements": "85/59/88",
+            "cup": "C"
+        }
     },
     {
         "name": "愛沢有紗",
         "code": "B-02",
-        "height": "164",
-        "measurements": "86/56/85",
-        "cup": "F",
-        "figure": []
+        "body": {
+            "height": "164",
+            "measurements": "86/56/85",
+            "cup": "F"
+        }
     },
     {
         "name": "楓ふうあ",
         "code": "B-03",
-        "height": "170",
-        "measurements": "93/59/88",
-        "cup": "F",
-        "figure": []
+        "body": {
+            "height": "170",
+            "measurements": "93/59/88",
+            "cup": "F"
+        }
     },
     {
         "name": "石原莉奈",
         "code": "B-05",
-        "height": "155",
-        "measurements": "85/56/84",
-        "cup": "D",
-        "figure": []
+        "body": {
+            "height": "155",
+            "measurements": "85/56/84",
+            "cup": "D"
+        }
     },
     {
         "name": "青空ひかり",
         "code": "B-14",
-        "height": "153",
-        "measurements": "85/58/83",
-        "cup": "D",
-        "figure": []
+        "body": {
+            "height": "153",
+            "measurements": "85/58/83",
+            "cup": "D"
+        }
     },
     {
         "name": "天使もえ",
         "code": "B-06",
-        "height": "155",
-        "measurements": "84/57/82",
-        "cup": "D",
-        "figure": []
+        "body": {
+            "height": "155",
+            "measurements": "84/57/82",
+            "cup": "D"
+        }
     },
     {
         "name": "Rio(柚木ティナ)",
         "code": "B-12",
-        "height": "154",
-        "measurements": "84/58/83",
-        "cup": "C",
-        "figure": []
+        "body": {
+            "height": "154",
+            "measurements": "84/58/83",
+            "cup": "C"
+        }
     },
     {
         "name": "栗宮ふたば",
         "code": "B-13",
-        "height": "153",
-        "measurements": "86/55/86",
-        "cup": "D",
-        "figure": []
+        "body": {
+            "height": "153",
+            "measurements": "86/55/86",
+            "cup": "D"
+        }
     },
     {
         "name": "桃乃木かな",
         "code": "B-07",
-        "height": "153",
-        "measurements": "80/54/80",
-        "cup": "F",
-        "figure": []
+        "body": {
+            "height": "153",
+            "measurements": "80/54/80",
+            "cup": "F"
+        }
     },
     {
         "name": "滝澤ローラ",
         "code": "D-01",
-        "height": "172",
-        "measurements": "83/58/84",
-        "cup": "D",
-        "figure": []
+        "body": {
+            "height": "172",
+            "measurements": "83/58/84",
+            "cup": "D"
+        }
     },
     {
         "name": "流川夕",
         "code": "D-02",
-        "height": "160",
-        "measurements": "84/54/88",
-        "cup": "C",
-        "figure": []
+        "body": {
+            "height": "160",
+            "measurements": "84/54/88",
+            "cup": "C"
+        }
     },
     {
         "name": "園田みおん",
         "code": "D-03",
-        "height": "150",
-        "measurements": "90/58/88",
-        "cup": "G",
-        "figure": ["乾りっか"]
+        "body": {
+            "height": "150",
+            "measurements": "90/58/88",
+            "cup": "G"
+        }
     },
     {
         "name": "吉沢明歩",
         "code": "D-04",
-        "height": "161",
-        "measurements": "86/58/86",
-        "cup": "E",
-        "figure": []
+        "body": {
+            "height": "161",
+            "measurements": "86/58/86",
+            "cup": "E"
+        }
     },
     {
         "name": "華嶋れい菜",
         "code": "D-05",
-        "height": "171",
-        "measurements": "88/59/87",
-        "cup": "E",
-        "figure": []
+        "body": {
+            "height": "171",
+            "measurements": "88/59/87",
+            "cup": "E"
+        }
     }
 ]
