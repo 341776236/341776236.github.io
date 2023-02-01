@@ -160,5 +160,14 @@
             "measurements": "88/59/87",
             "cup": "E"
         }
+    },
+    {
+        "name": "涼森れむ",
+        "code": "D-06",
+        "body": {
+            "height": "160",
+            "measurements": "87/58/85",
+            "cup": "F"
+        }       
     }
 ]
