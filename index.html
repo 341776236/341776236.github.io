@@ -58,12 +58,18 @@
         const base_url = "https://341776236.github.io";
 
         // 人物映射
-        function renderActress(data){
+        function renderActress(data) {
             let actress_tbody = document.getElementById('actress_tbody');
-            actress_tbody.innerHTML = data.map(actress => `
+            actress_tbody.innerHTML = data
+                // 按罩杯排序（降序）
+                .sort((current, after) => current.body.cup.charCodeAt() < after.body.cup.charCodeAt())
+                // 按身高排序（降序）
+                .sort((current, after) => Number(current.body.height) < Number(after.body.height))
+                .map(actress =>
+                    `
                         <tr>
                             <td style='text-align:center;'>
-                                <a href='${base_url}/demo.html?star=${actress.code.toLocaleLowerCase().replace('-','')}'>
+                                <a href='${base_url}/demo.html?star=${actress.code.toLocaleLowerCase().replace('-', '')}'>
                                     <span>${actress.name}</span>
                                 </a>
                             </td>
@@ -72,7 +78,8 @@
                             <td style='text-align:center;'><span>${actress.body.measurements}</span></td>
                             <td style='text-align:center;'><span>${actress.body.cup}</span></td>
                         </tr>
-            `).reduce((previous, current) => previous + current);
+                    `
+                ).reduce((previous, current) => previous + current);
         }
 
         // 厂商映射
@@ -85,7 +92,6 @@
                 .reduce((previous, current) => previous + current);            
         }
 
-        
         // 网络请求
         $.getJSON(`${base_url}/data/actress.json`, data => renderActress(data));
         $.getJSON(`${base_url}/data/manufacturer.json`, data => renderManufacturer(data));
