@@ -57,8 +57,8 @@
 
         const base_url = "https://341776236.github.io";
 
-        // 人物映射
-        function renderActress(data) {
+       // 人物映射
+       function renderActress(data) {
             let actress_tbody = document.getElementById('actress_tbody');
             actress_tbody.innerHTML = data
                 // 按罩杯排序（降序）
@@ -78,18 +78,22 @@
                             <td style='text-align:center;'><span>${actress.body.measurements}</span></td>
                             <td style='text-align:center;'><span>${actress.body.cup}</span></td>
                         </tr>
-                    `
-                ).reduce((previous, current) => previous + current);
+                    `)
+                .reduce((previous, current) => previous + current);
         }
 
         // 厂商映射
-        function renderManufacturer(data){
+        function renderManufacturer(data) {
             let manufacturer_tbody = document.getElementById('manufacturer_tbody');
-            manufacturer_tbody.innerHTML = data.map(item => `
+            manufacturer_tbody.innerHTML = data
+                .sort((current, after) => current.name.substring(0, 1).charCodeAt() > after.name.substring(0, 1).charCodeAt())
+                .map(item =>
+                    `
                         <td style='text-align:center;'><span>${item.name}</span></td>
                         <td style='text-align:center;'><span>${item.code}</span></td>
-            `).map((item, index) => index % 3 == 0 ? "<tr>" + item : index % 3 == 2 ? item + "</tr>" : item)
-                .reduce((previous, current) => previous + current);            
+                    `)
+                .map((item, index) => index % 3 == 0 ? "<tr>" + item : index % 3 == 2 ? item + "</tr>" : item)
+                .reduce((previous, current) => previous + current);
         }
 
         // 网络请求
