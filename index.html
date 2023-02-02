@@ -86,7 +86,7 @@
         function renderManufacturer(data) {
             let manufacturer_tbody = document.getElementById('manufacturer_tbody');
             manufacturer_tbody.innerHTML = data
-                .sort((current, after) => current.name.substring(0, 1).charCodeAt() > after.name.substring(0, 1).charCodeAt())
+               // .sort((current, after) => current.name.substring(0, 1).charCodeAt() > after.name.substring(0, 1).charCodeAt())
                 .map(item =>
                     `
                         <td style='text-align:center;'><span>${item.name}</span></td>
