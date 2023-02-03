@@ -117,6 +117,15 @@
         }
     },
     {
+        "name":"森沢かな",
+        "code": "B-11",
+        "body": {
+            "height": "160",
+            "measurements": "85/60/88",
+            "cup": "F"
+        }
+    },
+    {
         "name": "滝澤ローラ",
         "code": "D-01",
         "body": {
