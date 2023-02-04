@@ -7,6 +7,8 @@
 
 ## GitLab
 - https://gitlab.com/kwy43xlrte4sodf/dir/-/raw/main/res/b01/STARS-141[02]-0006.png
+- https://gitlab.com/video_repository/
+- https://gitlab.com/video_repository/{code}/-/raw/main/
 
 github存放json文件数据，gitlab存放图片，以50M为一个分支创建
 
