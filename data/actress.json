@@ -2,6 +2,8 @@
     {
         "name": "上原瑞穂",
         "code": "A-01",
+        "features":"-",
+        "date":"-",
         "body": {
             "height": "160",
             "measurements": "85/58/80",
@@ -11,6 +13,8 @@
     {
         "name": "水卜さくら",
         "code": "A-02",
+        "features":"-",
+        "date":"-",
         "body": {
             "height": "152",
             "measurements": "79/52/78",
@@ -20,6 +24,8 @@
     {
         "name": "岸田歩美",
         "code": "A-03",
+        "features":"-",
+        "date":"-",
         "body": {
             "height": "156",
             "measurements": "83/56/82",
@@ -29,6 +35,8 @@
     {
         "name": "羽田あい",
         "code": "A-04",
+        "features":"-",
+        "date":"-",
         "body": {
             "height": "169",
             "measurements": "87/55/85",
@@ -38,6 +46,8 @@
     {
         "name": "本庄鈴",
         "code": "B-01",
+        "features":"-",
+        "date":"-",
         "body": {
             "height": "165",
             "measurements": "85/59/88",
@@ -47,6 +57,8 @@
     {
         "name": "愛沢有紗",
         "code": "B-02",
+        "features":"-",
+        "date":"-",
         "body": {
             "height": "164",
             "measurements": "86/56/85",
@@ -56,6 +68,8 @@
     {
         "name": "楓ふうあ",
         "code": "B-03",
+        "features":"-",
+        "date":"-",
         "body": {
             "height": "170",
             "measurements": "93/59/88",
@@ -83,6 +97,8 @@
     {
         "name": "天使もえ",
         "code": "B-06",
+        "features":"-",
+        "date":"-",
         "body": {
             "height": "155",
             "measurements": "84/57/82",
@@ -92,6 +108,8 @@
     {
         "name": "Rio(柚木ティナ)",
         "code": "B-12",
+        "features":"-",
+        "date":"-",
         "body": {
             "height": "154",
             "measurements": "84/58/83",
@@ -101,6 +119,8 @@
     {
         "name": "栗宮ふたば",
         "code": "B-13",
+        "features":"-",
+        "date":"-",
         "body": {
             "height": "153",
             "measurements": "86/55/86",
@@ -110,6 +130,8 @@
     {
         "name": "桃乃木かな",
         "code": "B-07",
+        "features":"-",
+        "date":"-",
         "body": {
             "height": "153",
             "measurements": "80/54/80",
@@ -148,6 +170,8 @@
     {
         "name": "園田みおん",
         "code": "D-03",
+        "features":"-",
+        "date":"-",
         "body": {
             "height": "150",
             "measurements": "90/58/88",
@@ -158,6 +182,7 @@
         "name": "吉沢明歩",
         "code": "D-04",
         "date":"1984",
+        "features":"-",
         "body": {
             "height": "161",
             "measurements": "86/58/86",
@@ -167,6 +192,8 @@
     {
         "name": "華嶋れい菜",
         "code": "D-05",
+        "features":"-",
+        "date":"-",
         "body": {
             "height": "171",
             "measurements": "88/59/87",
