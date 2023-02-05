@@ -3,7 +3,7 @@
         "name": "上原瑞穂",
         "code": "A-01",
         "features":"-",
-        "date":"-",
+        "date":"1991",
         "body": {
             "height": "160",
             "measurements": "85/58/80",
@@ -14,7 +14,7 @@
         "name": "水卜さくら",
         "code": "A-02",
         "features":"-",
-        "date":"-",
+        "date":"1997",
         "body": {
             "height": "152",
             "measurements": "79/52/78",
@@ -36,7 +36,7 @@
         "name": "羽田あい",
         "code": "A-04",
         "features":"-",
-        "date":"-",
+        "date":"1989",
         "body": {
             "height": "169",
             "measurements": "87/55/85",
@@ -47,7 +47,7 @@
         "name": "本庄鈴",
         "code": "B-01",
         "features":"-",
-        "date":"-",
+        "date":"1997",
         "body": {
             "height": "165",
             "measurements": "85/59/88",
@@ -58,7 +58,7 @@
         "name": "愛沢有紗",
         "code": "B-02",
         "features":"-",
-        "date":"-",
+        "date":"1991",
         "body": {
             "height": "164",
             "measurements": "86/56/85",
@@ -69,7 +69,7 @@
         "name": "楓ふうあ",
         "code": "B-03",
         "features":"-",
-        "date":"-",
+        "date":"2001",
         "body": {
             "height": "170",
             "measurements": "93/59/88",
@@ -79,6 +79,8 @@
     {
         "name": "石原莉奈",
         "code": "B-05",
+        "features":"-",
+        "date":"1987",
         "body": {
             "height": "155",
             "measurements": "85/56/84",
@@ -88,6 +90,8 @@
     {
         "name": "青空ひかり",
         "code": "B-14",
+        "features":"-",
+        "date":"1999",
         "body": {
             "height": "153",
             "measurements": "85/58/83",
@@ -141,6 +145,8 @@
     {
         "name":"森沢かな",
         "code": "B-11",
+        "features":"-",
+        "date":"-",
         "body": {
             "height": "160",
             "measurements": "85/60/88",
@@ -150,6 +156,8 @@
     {
         "name": "滝澤ローラ",
         "code": "D-01",
+        "features":"-",
+        "date":"-",
         "body": {
             "height": "172",
             "measurements": "83/58/84",
@@ -159,7 +167,7 @@
     {
         "name": "流川夕",
         "code": "D-02",
-        "features":"脸,腿",
+        "features":"-",
         "date":"1999",
         "body": {
             "height": "160",
@@ -225,7 +233,7 @@
     {
         "name": "天海つばさ",
         "code": "-",
-        "features":"脸,腿",
+        "features":"-",
         "date":"1988",
         "body": {
             "height": "160",
@@ -236,7 +244,7 @@
     {
         "name": "立花美涼",
         "code": "-",
-        "features":"脸,腿",
+        "features":"-",
         "date":"1988",
         "body": {
             "height": "161",
