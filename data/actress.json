@@ -137,6 +137,8 @@
     {
         "name": "流川夕",
         "code": "D-02",
+        "features":"脸,腿",
+        "date":"1999",
         "body": {
             "height": "160",
             "measurements": "84/54/88",
@@ -155,6 +157,7 @@
     {
         "name": "吉沢明歩",
         "code": "D-04",
+        "date":"1984",
         "body": {
             "height": "161",
             "measurements": "86/58/86",
@@ -167,6 +170,50 @@
         "body": {
             "height": "171",
             "measurements": "88/59/87",
+            "cup": "E"
+        }
+    },
+    {
+        "name": "森日向子",
+        "code": "-",
+        "features":"腿",
+        "date":"2000",
+        "body": {
+            "height": "166",
+            "measurements": "75/56/88",
+            "cup": "A"
+        }
+    },
+    {
+        "name": "藍芽みずき",
+        "code": "-",
+        "features":"腿",
+        "date":"2000",
+        "body": {
+            "height": "158",
+            "measurements": "85/57/85",
+            "cup": "E"
+        }
+    },
+    {
+        "name": "天海つばさ",
+        "code": "-",
+        "features":"脸,腿",
+        "date":"1988",
+        "body": {
+            "height": "160",
+            "measurements": "85/60/88",
+            "cup": "E"
+        }
+    },
+    {
+        "name": "立花美涼",
+        "code": "-",
+        "features":"脸,腿",
+        "date":"1988",
+        "body": {
+            "height": "161",
+            "measurements": "88-56-85",
             "cup": "E"
         }
     }
