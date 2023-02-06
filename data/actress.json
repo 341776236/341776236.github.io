@@ -251,5 +251,16 @@
             "measurements": "88-56-85",
             "cup": "E"
         }
+    },
+    {
+        "name": "夏希まろん",
+        "code": "-",
+        "features":"-",
+        "birthday":"1996",
+        "body": {
+            "height": "164",
+            "measurements": "88-53-86",
+            "cup": "G"
+        }
     }
 ]
