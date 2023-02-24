@@ -262,5 +262,16 @@
             "measurements": "88-53-86",
             "cup": "G"
         }
+    },
+    {
+        "name": "宮下玲奈",
+        "code": "-",
+        "features":"-",
+        "birthday":"2002",
+        "body": {
+            "height": "162",
+            "measurements": "83-57-85",
+            "cup": "D"
+        }
     }
 ]
