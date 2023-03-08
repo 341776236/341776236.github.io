@@ -284,5 +284,16 @@
             "measurements": "86-58-85",
             "cup": "E"
         }
+    },
+    {
+        "name": "乙葉カレン",
+        "code": "-",
+        "features":"身材/腿",
+        "birthday":"-",
+        "body": {
+            "height": "167",
+            "measurements": "79-51-78",
+            "cup": "F"
+        }
     }
 ]
