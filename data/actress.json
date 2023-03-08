@@ -273,5 +273,16 @@
             "measurements": "83-57-85",
             "cup": "D"
         }
+    },
+    {
+        "name": "大橋未久",
+        "code": "-",
+        "features":"-",
+        "birthday":"1987",
+        "body": {
+            "height": "158",
+            "measurements": "86-58-85",
+            "cup": "E"
+        }
     }
 ]
