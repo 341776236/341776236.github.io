@@ -209,17 +209,6 @@
         }
     },
     {
-        "name": "森日向子",
-        "code": "-",
-        "features":"腿",
-        "birthday":"2000",
-        "body": {
-            "height": "166",
-            "measurements": "75/56/88",
-            "cup": "A"
-        }
-    },
-    {
         "name": "藍芽みずき",
         "code": "-",
         "features":"腿",
@@ -283,17 +272,6 @@
             "height": "158",
             "measurements": "86-58-85",
             "cup": "E"
-        }
-    },
-    {
-        "name": "乙葉カレン",
-        "code": "-",
-        "features":"身材/腿",
-        "birthday":"-",
-        "body": {
-            "height": "167",
-            "measurements": "79-51-78",
-            "cup": "F"
         }
     }
 ]
